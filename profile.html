@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile - HEART DISEASE PREDICTOR</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+            
+                <li><a href="./profile.html" class="active">Profile</a></li>
+              
+                <li><a href="./signin.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+
+        </header>
+            <section class="profile-section">
+                <h1 class="homepage-heading">HEART DISEASE PREDICTOR</h1>
+                <div class="profile-card">
+                    <h2>Your Profile</h2>
+                    <div class="profile-details">
+                        <div class="profile-field">
+                            <label for="firstName">First Name</label>
+                            <span id="firstName">Thomas</span>
+                        </div>
+                        <div class="profile-field">
+                            <label for="lastName">Last Name</label>
+                            <span id="lastName">Doe</span>
+                        </div>
+                        <div class="profile-field">
+                            <label for="email">Email</label>
+                            <span id="email">Thomas.doe@gmail.com</span>
+                        </div>
+                        <div class="profile-field">
+                            <label for="interests">Symptoms</label>
+                            <span id="interests">Breathlessness, Left hand pain</span>
+                        </div>
+                    </div>
+                    <button class="edit-button" id="editButton">Edit Profile</button>
+                    <form class="edit-form" id="editForm" style="display: none;">
+                        <div class="profile-field">
+                            <label for="newFirstName">New First Name</label>
+                            <input type="text" id="newFirstName" placeholder="Enter new first name" required>
+                        </div>
+                        <div class="profile-field">
+                            <label for="newLastName">New Last Name</label>
+                            <input type="text" id="newLastName" placeholder="Enter new last name" required>
+                        </div>
+                        <div class="profile-field">
+                            <label for="newEmail">New Email</label>
+                            <input type="email" id="newEmail" placeholder="Enter new email" required>
+                        </div>
+                        <div class="profile-field">
+                            <label for="newInterests">Symptoms</label>
+                            <select id="newInterests" multiple>
+                                <option value="Computer Science">Chest Pain</option>
+                                <option value="Engineering">Persistent cough</option>
+                                <option value="Engineering">Fatigue</option>
+                                <option value="Engineering">Bowel Movements</option>
+                                <option value="Engineering">Nausea</option>
+                                <option value="Engineering">Heart burn</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="edit-button">Update Profile</button>
+                        
+                    </form>
+                </div>
+            </section>
+            <script>
+                // JavaScript to toggle the edit form's visibility
+                const editButton = document.getElementById("editButton");
+                const editForm = document.getElementById("editForm");
+                editButton.addEventListener("click", function() {
+                    editForm.style.display = "block";
+                    editButton.style.display = "none";
+                });
+            </script>
+        </body>
+        </html>
+        

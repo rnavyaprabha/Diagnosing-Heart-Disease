@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - HEART DISEASE PREDICTOR</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function showPopup() {
+            alert("Registered Successfully!");
+        }
+    </script>
+    <style>
+        /* Add your custom styles for the pop-up message */
+        .popup-message {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./signin.html" class="active">Login</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-section">
+        <h1 class="homepage-heading">HEART DISEASE PREDICTOR</h1>
+        <form onsubmit="showPopup(); return false;">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="cyan-button">Sign Up</button>
+        </form>
+        <p class="white-link">Already have an account? <a href="signin.html" class="white-link">Sign in here</a></p>
+    </section>
+</body>
+</html>

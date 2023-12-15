@@ -1,0 +1,207 @@
+html{
+	height: 100%;
+	margin: 0;
+	/* background: url(https://t3.ftcdn.net/jpg/05/36/20/28/240_F_536202816_sFFmqKC2tDdqubCgfrfMN4pmjwdRvPow.jpg) no-repeat center center fixed;  */
+    background : url(./img2.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+/* Website Title */
+.container{
+    padding: 30px;
+	position:relative;
+	background: linear-gradient(45deg, #ec9a9a, #ec571c, #ff0202);
+	/*background: linear-gradient(45deg,white,white,white)*/
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: #ffffff;
+	font-family: 'Pacifico', cursive;
+	font-size: 35px;
+	font-weight: normal;
+}
+
+.description p{
+	color: #ffffff;
+    font-style: italic;
+    font-size: 14px;
+    margin: -5px 0 0;
+}
+
+/* Text Area */
+.ml-container{
+    margin: 30px 0;
+	flex: 1 0 auto;
+
+}
+
+.form {
+	text-align: center;
+	width: 250px;
+	height: 25px;
+	margin-bottom: 5px;
+	
+}
+
+input[type=text], select {
+    width:60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+	display: inline block;
+	width: 200px;
+	font-weight: bold;
+	text-align: center;
+	 float: left; 
+		
+  }
+
+/* Style for X-ray image upload */
+#xray {
+	display: none; /* Hide the default file input */
+  }
+  
+  .form-group {
+	margin-bottom: 20px; /* Adjust as needed to match your layout */
+  }
+  
+  .file-upload-container {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+  }
+  
+  .file-upload-button {
+	color: #fff;
+	background-color: #3498db;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  #xray {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	cursor: pointer;
+  }
+  
+  .file-name {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #555;
+  }
+  
+  .upload-label {
+	display: block;
+	color: #333;
+	font-size: 16px;
+  }
+  
+
+
+/* Predict Button */
+.my-cta-button{
+	background: #f9f9f9;
+   	border: 2px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+	margin-top: 10px;
+    padding: 10px 36px;
+    color: #000000;
+    display: inline-block;
+   	font: italic bold 20px/1 "Calibri", sans-serif;
+    text-align: center;
+}
+
+.my-cta-button:hover{
+    color: #141414;
+    border: 2px solid #46424b;
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+
+/* Contact */
+.contact-icon{
+	color: #ffffff;
+	padding: 7px;
+}
+
+.contact-icon:hover{
+	color: #8c8c8c;
+}
+
+/* Footer */
+.footer{
+	flex-shrink: 0;
+	position:relative;
+	padding: 20px;
+	background: linear-gradient(45deg, #161616, #383436, #161616);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+
+.footer-description{
+	color: #ffffff;
+	margin: 0;
+	font-size: 12px;
+}
+
+/* Result */
+.results{
+    padding: 30px 0 0;
+	flex: 1 0 auto;
+}
+
+.danger{
+    color: #ff0000;
+}
+
+.safe{
+    color: green;
+}
