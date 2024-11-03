@@ -5,39 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Heart Disease Expert system </title>
+  <title>Heart Disease Expert system</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <!-- Add the following style in your <head> section -->
-<style>
-  /* ... Your existing styles ... */
- /* Style for X-ray image upload */
- .upload-label {
-    color: white; /* Set the text color to white */
-  }
-  /* Style for X-ray image upload */
-  .file-upload-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .file-upload-button, .my-cta-button {
-    margin-top: 10px; /* Adjust as needed */
-  }
-
-  .file-name {
-    color: white; /* Set the text color to white */
-    margin-left: 0.1px; /* Adjust as needed */
-  }
-   /* Adjust the right margin for the Predict button */
-   #demo {
-    margin-right: 0.1px; /* Adjust as needed */
-  }
-</style>
-
 </head>
 
 <body>
@@ -54,27 +25,11 @@
 
   <!-- Text Area -->
   <div class="ml-container">
-
-      <form action="prediction.html" method="POST">
-
-      
-      <label for="age">Age</label>
-<input type="text" id="age" name="age" placeholder="Enter Your age" oninput="validateAgeInput(this)">
-<br>
-
-<script>
-function validateAgeInput(input) {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/\D/g, '');
-
-    // Limit the length to 3 characters
-    if (input.value.length > 3) {
-        input.value = input.value.slice(0, 3);
-    }
-}
-</script>
+    <form action="prediction.html" method="POST"> 
 
       
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Enter Your age"><br>
 
 
 
@@ -99,45 +54,12 @@ function validateAgeInput(input) {
 
 
         <label for="trestbps">Resting Blood Pressure</label>
-<input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg" oninput="validateInput(this)">
-<br>
+        <input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg"><br>
 
-<script>
-function validateInput(input) {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/[^0-9]/g, '');
 
-    // Ensure the value is within the specified range
-    const value = parseInt(input.value, 10);
-    if (isNaN(value) || value < 94 || value > 200) {
-        input.setCustomValidity('Enter a valid number in the range [94-200]');
-    } else {
-        input.setCustomValidity('');
-    }
-}
-</script>
 
-<label for="chol">Serum Cholesterol</label>
-<input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl" oninput="validateCholesterolInput(this)">
-<br>
-
-<script>
-function validateCholesterolInput(input) {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/\D/g, '');
-
-    // Ensure the value is within the specified range
-    const value = parseInt(input.value, 10);
-    if (isNaN(value)) {
-        input.setCustomValidity('Enter a valid number');
-    } else if (value < 126 || value > 564) {
-        input.setCustomValidity('Enter a number in the range [126-564]');
-    } else {
-        input.setCustomValidity('');
-    }
-}
-</script>
-
+        <label for="chol">Serum Cholesterol</label>
+        <input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl"><br>
 
 
 
@@ -150,26 +72,20 @@ function validateCholesterolInput(input) {
 
 
 
-        <label for="thalach">Max Heart Rate</label>
-<input type="text" id="thalach" name="thalach" placeholder="A number in range [71-202] bpm" oninput="validateHeartRateInput(this)">
-<br>
+        <label for="restecg">Resting ECG Results</label>
+        <select id="restecg" name="restecg">
+          <option selected>----select option----</option>
+          <option value="0">Normal</option>
+          <option value="1">Having ST-T wave abnormality</option>
+          <option value="2">Probable or definite left ventricular
+            hypertrophy</option>
+        </select><br>
 
-<script>
-function validateHeartRateInput(input) {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/\D/g, '');
 
-    // Ensure the value is within the specified range
-    const value = parseInt(input.value, 10);
-    if (isNaN(value)) {
-        input.setCustomValidity('Enter a valid number');
-    } else if (value < 71 || value > 202) {
-        input.setCustomValidity('Enter a number in the range [71-202]');
-    } else {
-        input.setCustomValidity('');
-    }
-}
-</script>
+
+        <label for="thalach">Max Heart Rate </label>
+        <input type="text" id="thalach" name="thalach" placeholder="A number in range [71-202] bpm"><br>
+
 
         <label for="exang">Exercise-induced Angina</label>
         <select id="exang" name="exang">
@@ -179,26 +95,9 @@ function validateHeartRateInput(input) {
         </select><br>
 
 
-        <label for="oldpeak">ST Depression</label>
-<input type="text" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]" oninput="validateSTDepressionInput(this)">
-<br>
+        <label for="oldpeak">ST depression</label>
+        <input type="text" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]"><br>
 
-<script>
-function validateSTDepressionInput(input) {
-    // Remove non-numeric characters
-    input.value = input.value.replace(/[^0-9.]/g, '');
-
-    // Ensure the value is within the specified range
-    const value = parseFloat(input.value);
-    if (isNaN(value)) {
-        input.setCustomValidity('Enter a valid number');
-    } else if (value < 0 || value > 6.2) {
-        input.setCustomValidity('Enter a number in the range [0-6.2]');
-    } else {
-        input.setCustomValidity('');
-    }
-}
-</script>
 
 
         <label for="slope">slope of the peak exercise ST segment</label>
@@ -210,17 +109,12 @@ function validateSTDepressionInput(input) {
         </select><br>
         
 
-        
-<br>
-
-<label for="ca">Number of Major vessels</label>
+        <label for="ca">Number of Major vessels</label>
         <input type="text" id="ca" name="ca" placeholder="Typically in [0-4]"><br> 
-                    
-
                           
 
 
-        <label for="thal"> Thalassemia </label> 
+        <label for="thal">Thalassemia</label> 
         <select id="thal" name="thal">
           <option selected>----select option----</option>
           <option value="0">Normal</option>
@@ -228,31 +122,28 @@ function validateSTDepressionInput(input) {
           <option value="2">Reversible Defect</option>  
         </select><br>
 
-    <!-- Add the following input for X-ray image upload -->
-    <div class="form-group">
-      <label for="xray" class="upload-label">Upload your X-ray</label>
-      <div class="file-upload-container">
-        <label for="xray" class="file-upload-button">Choose File</label>
-        <input type="file" id="xray" name="xray" accept=".jpg, .jpeg, .png" onchange="displayFileName(this)">
-        <div class="file-name" id="file-name"></div>
-      </div>
-    </div>
-    <script>
-      // Function to display the selected file name
-      function displayFileName(input) {
-        const fileName = input.files[0] ? input.files[0].name : '';
-        document.getElementById('file-name').textContent = fileName;
-      }
-    </script>
-
-    <div class="file-upload-container">
-      <button id="demo" class="my-cta-button" onclick="window.location.href='prediction.html'">Predict</button>
       
-    </div>
-    
+
+      <input type="submit" class="my-cta-button" value="Register & predict">
+
+      <button id="demo" onclick="window.location.href='prediction.html'">Predict</button>
+
       
     </form>
   </div>
+
+  <!-- Footer -->
+  
+  <!--<div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/astha-sharma-47266b11b/"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Astha Sharma.</p>
+  </div>
+-->
 
 </body>
 

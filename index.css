@@ -1,15 +1,7 @@
 html{
 	height: 100%;
 	margin: 0;
-	/* background: url(https://t3.ftcdn.net/jpg/05/36/20/28/240_F_536202816_sFFmqKC2tDdqubCgfrfMN4pmjwdRvPow.jpg) no-repeat center center fixed;  */
-    background : url(./img2.jpg);
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
-
-
 
 body{
 	font-family: Arial, Helvetica,sans-serif;
@@ -20,15 +12,13 @@ body{
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	color: white;
 }
 
 /* Website Title */
 .container{
     padding: 30px;
 	position:relative;
-	background: linear-gradient(45deg, #ec9a9a, #ec571c, #ff0202);
-	/*background: linear-gradient(45deg,white,white,white)*/
+	background: linear-gradient(45deg, #161616, #383436, #161616);
 	background-size: 500% 500%;
 	animation: change-gradient 10s ease-in-out infinite;
 }
@@ -92,56 +82,9 @@ label {
 	width: 200px;
 	font-weight: bold;
 	text-align: center;
-	 float: left; 
+	float: left;
 		
   }
-
-/* Style for X-ray image upload */
-#xray {
-	display: none; /* Hide the default file input */
-  }
-  
-  .form-group {
-	margin-bottom: 20px; /* Adjust as needed to match your layout */
-  }
-  
-  .file-upload-container {
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-  }
-  
-  .file-upload-button {
-	color: #fff;
-	background-color: #3498db;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-  }
-  
-  #xray {
-	position: absolute;
-	font-size: 100px;
-	right: 0;
-	top: 0;
-	opacity: 0;
-	cursor: pointer;
-  }
-  
-  .file-name {
-	margin-top: 10px;
-	font-size: 14px;
-	color: #555;
-  }
-  
-  .upload-label {
-	display: block;
-	color: #333;
-	font-size: 16px;
-  }
-  
-
 
 /* Predict Button */
 .my-cta-button{
